@@ -14,23 +14,15 @@ class TempSuspension extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double flexibleWidth = MediaQuery.of(context).size.width;
-    print(flexibleWidth);
-    if (!kIsWeb) {
-      if (Platform.isAndroid) {
-        print("android");
-      } else {
-        print("ios");
-      }
-    }
     return Center(
       child: Column(
         children: [
           const SizedBox(
             height: 88,
           ),
-          if (kIsWeb)
-            SvgPicture.network("assets/images/stop_img2.svg")
-          else
+//          if (kIsWeb)
+//            SvgPicture.network("assets/images/stop_img2.svg")
+//          else
             SvgPicture.asset("assets/images/stop_img2.svg"),
           const SizedBox(
             height: 29,
@@ -77,11 +69,11 @@ class TempSuspension extends StatelessWidget {
           const SizedBox(
             height: 22,
           ),
-          if (kIsWeb)
-            SvgPicture.network(
-              "assets/images/line_img.svg",
-            )
-          else
+//          if (kIsWeb)
+//            SvgPicture.network(
+//              "assets/images/line_img.svg",
+//            )
+//          else
             SvgPicture.asset("assets/images/line_img.svg"),
           const SizedBox(
             height: 23,
@@ -182,11 +174,11 @@ class TempSuspension extends StatelessWidget {
           const SizedBox(
             height: 65,
           ),
-          if (kIsWeb)
-            ImageRenderer(
-                child: SvgPicture.network("assets/images/logo_img.svg"),
-                alt: "FLEXME")
-          else
+//          if (kIsWeb)
+//            ImageRenderer(
+//                child: SvgPicture.network("assets/images/logo_img.svg"),
+//                alt: "FLEXME")
+//          else
             SvgPicture.asset("assets/images/logo_img.svg"),
         ],
       ),
