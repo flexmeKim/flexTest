@@ -17,9 +17,6 @@ class TempSuspension extends StatelessWidget {
           const SizedBox(
             height: 88,
           ),
-//          if (kIsWeb)
-//            SvgPicture.network("assets/images/stop_img2.svg")
-//          else
           SvgPicture.asset("assets/images/stop_img2.svg"),
           const SizedBox(
             height: 29,
@@ -64,11 +61,6 @@ class TempSuspension extends StatelessWidget {
           const SizedBox(
             height: 22,
           ),
-//          if (kIsWeb)
-//            SvgPicture.network(
-//              "assets/images/line_img.svg",
-//            )
-//          else
           SvgPicture.asset("assets/images/line_img.svg"),
           const SizedBox(
             height: 23,
@@ -169,27 +161,9 @@ class TempSuspension extends StatelessWidget {
           const SizedBox(
             height: 65,
           ),
-//          if (kIsWeb)
-//            ImageRenderer(
-//                child: SvgPicture.network("assets/images/logo_img.svg"),
-//                alt: "FLEXME")
-//          else
           SvgPicture.asset("assets/images/logo_img.svg"),
         ],
       ),
     );
   }
 }
-
-//        {
-//            "src": "icons/Icon-maskable-192.png",
-//            "sizes": "192x192",
-//            "type": "image/png",
-//            "purpose": "maskable"
-//        },
-//        {
-//            "src": "icons/Icon-maskable-512.png",
-//            "sizes": "512x512",
-//            "type": "image/png",
-//            "purpose": "maskable"
-//        }
