@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: kIsWeb && window.navigator.userAgent.contains('OS 15_') ? 'noto_sans_kr' : null,
+      theme: ThemeData(
+        fontFamily: 'noto_sans_kr',
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(),

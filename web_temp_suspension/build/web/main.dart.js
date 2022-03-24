@@ -53503,8 +53503,7 @@ r[1]=r[1]+s[1]
 r[2]=r[2]+s[2]
 r[3]=r[3]+s[3]}}
 A.Ba.prototype={
-U(a,b){var s=B.c.v(window.navigator.userAgent,"OS 15_")
-return new A.rz(B.Eo,A.aaQ(null,s?"noto_sans_kr":null,B.mT),!1,null)}}
+U(a,b){return new A.rz(B.Eo,A.aaQ(null,"noto_sans_kr",B.mT),!1,null)}}
 A.rO.prototype={
 aP(){return new A.Hr(B.m)}}
 A.Hr.prototype={
