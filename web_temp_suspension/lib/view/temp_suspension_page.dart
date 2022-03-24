@@ -1,9 +1,6 @@
-import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:seo_renderer/renderers/image_renderer/image_renderer_vm.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
 
 class TempSuspension extends StatelessWidget {
