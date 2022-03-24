@@ -23,7 +23,7 @@ class TempSuspension extends StatelessWidget {
 //          if (kIsWeb)
 //            SvgPicture.network("assets/images/stop_img2.svg")
 //          else
-            SvgPicture.asset("assets/images/stop_img2.svg"),
+          SvgPicture.asset("assets/images/stop_img2.svg"),
           const SizedBox(
             height: 29,
           ),
@@ -37,7 +37,6 @@ class TempSuspension extends StatelessWidget {
                 child: const Text(
                   "플렉스미 홈페이지",
                   style: TextStyle(
-                    fontFamily: 'noto_sans_kr',
                     fontSize: 40,
                     color: Color(0xff00788D),
                   ),
@@ -59,7 +58,6 @@ class TempSuspension extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         height: 0.95,
-                        fontFamily: 'noto_sans_kr',
                         fontWeight: FontWeight.bold,
                         fontSize: 64,
                         color: Color(0xff00788D))),
@@ -74,7 +72,7 @@ class TempSuspension extends StatelessWidget {
 //              "assets/images/line_img.svg",
 //            )
 //          else
-            SvgPicture.asset("assets/images/line_img.svg"),
+          SvgPicture.asset("assets/images/line_img.svg"),
           const SizedBox(
             height: 23,
           ),
@@ -85,7 +83,7 @@ class TempSuspension extends StatelessWidget {
                   left: flexibleWidth * 0.163, right: flexibleWidth * 0.163),
               child: const Text(
                 "더 나은 서비스 개선을 위하여\n 플렉스미 홈페이지 서비스를 임시 중단합니다.\n 이용에 불편을 드려서 죄송합니다.",
-                style: TextStyle(fontFamily: "noto_sans_kr", fontSize: 26),
+                style: TextStyle(fontSize: 26),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -134,9 +132,9 @@ class TempSuspension extends StatelessWidget {
                   const Text(
                     "03월28일14시 - 03월31일22시",
                     style: TextStyle(
-                        fontSize: 26,
-                        color: Color(0xffFF0012),
-                        fontFamily: "noto_sans_kr"),
+                      fontSize: 26,
+                      color: Color(0xffFF0012),
+                    ),
                   )
                 else
                   FittedBox(
@@ -148,9 +146,9 @@ class TempSuspension extends StatelessWidget {
                       child: const Text(
                         "03월28일14시 - 03월31일22시",
                         style: TextStyle(
-                            fontSize: 26,
-                            color: Color(0xffFF0012),
-                            fontFamily: "noto_sans_kr"),
+                          fontSize: 26,
+                          color: Color(0xffFF0012),
+                        ),
                       ),
                     ),
                   ),
@@ -179,7 +177,7 @@ class TempSuspension extends StatelessWidget {
 //                child: SvgPicture.network("assets/images/logo_img.svg"),
 //                alt: "FLEXME")
 //          else
-            SvgPicture.asset("assets/images/logo_img.svg"),
+          SvgPicture.asset("assets/images/logo_img.svg"),
         ],
       ),
     );

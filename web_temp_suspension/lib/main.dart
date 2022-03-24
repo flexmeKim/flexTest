@@ -1,6 +1,8 @@
+import 'dart:html';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:web_temp_suspension/view/temp_suspension_page.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
+      theme: ThemeData(fontFamily: kIsWeb && window.navigator.userAgent.contains('OS 15_') ? 'noto_sans_kr' : null,
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(),

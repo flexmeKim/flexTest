@@ -1,11 +1,11 @@
 {
-    "name": "web_temp_suspension",
-    "short_name": "web_temp_suspension",
+    "name": "flexme_test",
+    "short_name": "flexme_test",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "flexme_test_description.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
