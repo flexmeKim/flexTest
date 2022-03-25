@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "flexme_test",
+      title: "petrichor",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'noto_sans_kr',
