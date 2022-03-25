@@ -1,16 +1,42 @@
 # web_temp_suspension
 
-A new Flutter project.
+Flutter Web 사용전 예제 프로젝트
 
-## Getting Started
+### 사용된 기술
+1. splash
+2. meta
 
-This project is a starting point for a Flutter application.
+### Splash 적용 방법
 
-A few resources to get you started if this is your first Flutter project:
+ index.html에 \<body> 부분에 코드 추가 
+ 
+ 보여질 이미지 파일 등록 
+```html
+<img src="icons/512x512.png" alt="..." class="center"/>
+<script src="main.dart.js" type="application/javascript"></script>
+```
+ index.html 의 \<head> 부분에 코드 추가
+ ```html
+<link rel="stylesheet" type="text/css" href="styles.css">
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+web 경로에 styles.css 파일 추가
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+파일에 코드 작성
+```css
+.center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+```
+
+
+
+### meta Tag
+
+Web README.md 폴더에 정리가 되어져 있음.
+

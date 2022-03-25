@@ -17,19 +17,19 @@ class TempSuspension extends StatelessWidget {
           const SizedBox(
             height: 88,
           ),
-          SvgPicture.asset("assets/images/stop_img2.svg"),
+          SvgPicture.asset('assets/images/stop_img2.svg'),
           const SizedBox(
             height: 29,
           ),
           FittedBox(
             fit: BoxFit.fitWidth,
             child: TextRenderer(
-              text: "플렉스미 홈페이지",
+              text: '플렉스미 홈페이지',
               child: Padding(
                 padding: EdgeInsets.only(
                     left: flexibleWidth * 0.395, right: flexibleWidth * 0.376),
                 child: const Text(
-                  "플렉스미 홈페이지",
+                  '플렉스미 홈페이지',
                   style: TextStyle(
                     fontSize: 40,
                     color: Color(0xff00788D),
@@ -44,11 +44,11 @@ class TempSuspension extends StatelessWidget {
           FittedBox(
             fit: BoxFit.fitWidth,
             child: TextRenderer(
-              text: "임시 중단 안내",
+              text: '임시 중단 안내',
               child: Padding(
                 padding: EdgeInsets.only(
                     left: flexibleWidth * 0.355, right: flexibleWidth * 0.337),
-                child: const Text("임시 중단 안내",
+                child: const Text('임시 중단 안내',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         height: 0.95,
@@ -61,7 +61,7 @@ class TempSuspension extends StatelessWidget {
           const SizedBox(
             height: 22,
           ),
-          SvgPicture.asset("assets/images/line_img.svg"),
+          SvgPicture.asset('assets/images/line_img.svg'),
           const SizedBox(
             height: 23,
           ),
@@ -71,7 +71,7 @@ class TempSuspension extends StatelessWidget {
               padding: EdgeInsets.only(
                   left: flexibleWidth * 0.163, right: flexibleWidth * 0.163),
               child: const Text(
-                "더 나은 서비스 개선을 위하여\n 플렉스미 홈페이지 서비스를 임시 중단합니다.\n 이용에 불편을 드려서 죄송합니다.",
+                '더 나은 서비스 개선을 위하여\n 플렉스미 홈페이지 서비스를 임시 중단합니다.\n 이용에 불편을 드려서 죄송합니다.',
                 style: TextStyle(fontSize: 26),
                 textAlign: TextAlign.center,
               ),
@@ -91,7 +91,7 @@ class TempSuspension extends StatelessWidget {
               children: [
                 if (kIsWeb)
                   const Text(
-                    "-임시 중단 기간-",
+                    '-임시 중단 기간-',
                     style: TextStyle(
                       fontSize: 26,
                       color: Color(0xff5E5E5E),
@@ -106,7 +106,7 @@ class TempSuspension extends StatelessWidget {
                         right: flexibleWidth * 0.336,
                       ),
                       child: const Text(
-                        "-임시 중단 기간-",
+                        '-임시 중단 기간-',
                         style: TextStyle(
                           fontSize: 26,
                           color: Color(0xff5E5E5E),
@@ -119,7 +119,7 @@ class TempSuspension extends StatelessWidget {
                 ),
                 if (kIsWeb)
                   const Text(
-                    "03월28일14시 - 03월31일22시",
+                    '03월28일14시 - 03월31일22시',
                     style: TextStyle(
                       fontSize: 26,
                       color: Color(0xffFF0012),
@@ -133,7 +133,7 @@ class TempSuspension extends StatelessWidget {
                           left: flexibleWidth * 0.18,
                           right: flexibleWidth * 0.18),
                       child: const Text(
-                        "03월28일14시 - 03월31일22시",
+                        '03월28일14시 - 03월31일22시',
                         style: TextStyle(
                           fontSize: 26,
                           color: Color(0xffFF0012),
@@ -153,7 +153,7 @@ class TempSuspension extends StatelessWidget {
               padding: EdgeInsets.only(
                   left: flexibleWidth * 0.362, right: flexibleWidth * 0.361),
               child: const Text(
-                "※중단 기간은 당사 사정에 의해 변동 될 수 있습니다.",
+                '※중단 기간은 당사 사정에 의해 변동 될 수 있습니다.',
                 style: TextStyle(color: Color(0xff868686), fontSize: 18),
               ),
             ),
@@ -161,7 +161,7 @@ class TempSuspension extends StatelessWidget {
           const SizedBox(
             height: 65,
           ),
-          SvgPicture.asset("assets/images/logo_img.svg"),
+          SvgPicture.asset('assets/images/logo_img.svg'),
         ],
       ),
     );
