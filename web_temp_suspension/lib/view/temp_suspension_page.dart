@@ -24,7 +24,7 @@ class TempSuspension extends StatelessWidget {
           FittedBox(
             fit: BoxFit.fitWidth,
             child: TextRenderer(
-              text: '플렉스미 홈페이지',
+              text: 'petrichor',
               child: Padding(
                 padding: EdgeInsets.only(
                     left: flexibleWidth * 0.395, right: flexibleWidth * 0.376),
@@ -44,7 +44,7 @@ class TempSuspension extends StatelessWidget {
           FittedBox(
             fit: BoxFit.fitWidth,
             child: TextRenderer(
-              text: '임시 중단 안내',
+              text: 'petrichor.club',
               child: Padding(
                 padding: EdgeInsets.only(
                     left: flexibleWidth * 0.355, right: flexibleWidth * 0.337),
@@ -90,11 +90,14 @@ class TempSuspension extends StatelessWidget {
             child: Column(
               children: [
                 if (kIsWeb)
-                  const Text(
-                    '-임시 중단 기간-',
-                    style: TextStyle(
-                      fontSize: 26,
-                      color: Color(0xff5E5E5E),
+                  const TextRenderer(
+                    text: "패트릭코어",
+                    child: Text(
+                      '-임시 중단 기간-',
+                      style: TextStyle(
+                        fontSize: 26,
+                        color: Color(0xff5E5E5E),
+                      ),
                     ),
                   )
                 else
