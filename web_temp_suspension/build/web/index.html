@@ -1,121 +1,152 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+    <!--
+      If you are serving your web app in a path other than the root, change the
+      href value below to reflect the base path you are serving from.
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+      The path provided below has to start and end with a slash "/" in order for
+      it to work correctly.
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+      For more details:
+      * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
+      This is a placeholder for base href that will be replaced by the value of
+      the `--base-href` argument provided to `flutter build`.
+    -->
+    <base href="/">
 
-  <!-- Robot Setting -->
-  <meta name="robot" content="all"/>
-  <meta name="keywords" content="petrichorMJ,petrichormj,petrichoooor,petttric"/>
+    <!-- Robot Setting -->
+    <meta name="robot" content="all"/>
+    <meta name="keywords" content="petrichorMJ,petrichormj,petrichoooor,petttric"/>
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="petrichor_test_description.">
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="petrichor_test_description.">
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="petrichor_info">
-  <link rel="apple-touch-icon" href="icons/192x192.png">
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="petrichor_info">
+    <link rel="apple-touch-icon" href="icons/192x192.png">
 
-  <!-- Favicon -->
-  <link rel="icon"  href="favicon.ico"/>
-  <meta property="og:image" content="icons/192x192.png"/>
-<!--  <link rel="icon" type="image/png" href="favicon.png"/>-->
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico"/>
+    <!--  <link rel="icon" type="image/png" href="favicon.png"/>-->
 
+    <!-- meta property -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Petrichor">
+    <meta property="og:description" content="Petrichor info">
+    <meta property="og:image" content="icons/192x192.png"/>
+    <meta property="og:url" content="http://Petrichor.club">
 
-<!--  <script src="https://unpkg.com/canvaskit-wasm@0.33.0/bin/canvaskit.js"></script>-->
-<!--  <link rel="preload" href="https://unpkg.com/canvaskit-wasm@0.33.0/bin/canvaskit.wasm" as="fetch" crossOrigin="anonymous">-->
+    <!--  <script src="https://unpkg.com/canvaskit-wasm@0.33.0/bin/canvaskit.js"></script>-->
+    <!--  <link rel="preload" href="https://unpkg.com/canvaskit-wasm@0.33.0/bin/canvaskit.wasm" as="fetch" crossOrigin="anonymous">-->
 
-  <title>Petrichor</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" type="text/css" href="styles.css" >
-<!-- naver search advisor -->
-  <meta name="naver-site-verification" content="e61065fdd64669076997c932de1dcead09b4346a" />
+    <title>Petrichor</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- naver search advisor -->
+    <meta name="naver-site-verification" content="e61065fdd64669076997c932de1dcead09b4346a"/>
 
 </head>
 <body>
 <img src="icons/512x512.png" alt="petrichor" class="center"/>
 <script src="main.dart.js" type="application/javascript"></script>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
-  <script>
-    var serviceWorkerVersion = '873951804';
+<!-- This script installs service_worker.js to provide PWA functionality to
+     application. For more information, see:
+     https://developers.google.com/web/fundamentals/primers/service-workers -->
+<script>
+    var serviceWorkerVersion = '2796033320';
     var scriptLoaded = false;
+
     function loadMainDartJs() {
-      if (scriptLoaded) {
-        return;
-      }
-      scriptLoaded = true;
-      var scriptTag = document.createElement('script');
-      scriptTag.src = 'main.dart.js';
-      scriptTag.type = 'application/javascript';
-      document.body.append(scriptTag);
+        if (scriptLoaded) {
+            return;
+        }
+        scriptLoaded = true;
+        var scriptTag = document.createElement('script');
+        scriptTag.src = 'main.dart.js';
+        scriptTag.type = 'application/javascript';
+        document.body.append(scriptTag);
     }
 
     if ('serviceWorker' in navigator) {
-      // Service workers are supported. Use them.
-      window.addEventListener('load', function () {
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
-        navigator.serviceWorker.register(serviceWorkerUrl)
-          .then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener('statechange', () => {
-                if (serviceWorker.state == 'activated') {
-                  console.log('Installed new service worker.');
-                  loadMainDartJs();
-                }
-              });
-            }
-            if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
-              waitForActivation(reg.installing || reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
-              console.log('New service worker available.');
-              reg.update();
-              waitForActivation(reg.installing);
-            } else {
-              // Existing service worker is still good.
-              console.log('Loading app from service worker.');
-              loadMainDartJs();
-            }
-          });
+        // Service workers are supported. Use them.
+        window.addEventListener('load', function () {
+            // Wait for registration to finish before dropping the <script> tag.
+            // Otherwise, the browser will load the script multiple times,
+            // potentially different versions.
+            var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+            navigator.serviceWorker.register(serviceWorkerUrl)
+                .then((reg) => {
+                    function waitForActivation(serviceWorker) {
+                        serviceWorker.addEventListener('statechange', () => {
+                            if (serviceWorker.state == 'activated') {
+                                console.log('Installed new service worker.');
+                                loadMainDartJs();
+                            }
+                        });
+                    }
 
-        // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
-        setTimeout(() => {
-          if (!scriptLoaded) {
-            console.warn(
-              'Failed to load app from service worker. Falling back to plain <script> tag.',
-            );
-            loadMainDartJs();
-          }
-        }, 4000);
-      });
+                    if (!reg.active && (reg.installing || reg.waiting)) {
+                        // No active web worker and we have installed or are installing
+                        // one for the first time. Simply wait for it to activate.
+                        waitForActivation(reg.installing || reg.waiting);
+                    } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+                        // When the app updates the serviceWorkerVersion changes, so we
+                        // need to ask the service worker to update.
+                        console.log('New service worker available.');
+                        reg.update();
+                        waitForActivation(reg.installing);
+                    } else {
+                        // Existing service worker is still good.
+                        console.log('Loading app from service worker.');
+                        loadMainDartJs();
+                    }
+                });
+
+            // If service worker doesn't succeed in a reasonable amount of time,
+            // fallback to plaint <script> tag.
+            setTimeout(() => {
+                if (!scriptLoaded) {
+                    console.warn(
+                        'Failed to load app from service worker. Falling back to plain <script> tag.',
+                    );
+                    loadMainDartJs();
+                }
+            }, 4000);
+        });
     } else {
-      // Service workers not supported. Just drop the <script> tag.
-      loadMainDartJs();
+        // Service workers not supported. Just drop the <script> tag.
+        loadMainDartJs();
     }
-  </script>
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org/",
+        "@type": "Petrichor",
+        "name(속성)": "petrichor_name",
+        "image(속성)": [
+            "http://recipe1.ezmember.co.kr/cache/recipe/2016/10/07/f43063e718c49d85ddce4880e4a41fcd1_f.jpg",
+            "http://recipe1.ezmember.co.kr/cache/recipe/2016/10/07/f43063e718c49d85ddce4880e4a41fcd1.jpg"
+        ],
+        "author(속성)": {
+            "@type": "Petrichor",
+            "name(속성)": "Petrichor"
+        },
+        "datePublished(속성)": "2016-10-07T17:25:06+09:00",
+        "description(속성)": "테스트 페이지 입니다. 테스트 동작 유무 확인",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue(속성)": "5",
+            "reviewCount(속성)": "16"
+        },
+        "totalTime(속성)": "PT15M",
+        "recipeYield(속성)": "2 servings",
+        "recipeInstructions(속성)": "\nPetrichor 테스트 동작 "
+</script>
 </body>
 </html>
 

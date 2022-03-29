@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
+import 'package:web_temp_suspension/view/named_page.dart';
 
 class TempSuspension extends StatelessWidget {
   TempSuspension({Key? key, required this.title}) : super(key: key);
@@ -108,11 +109,14 @@ class TempSuspension extends StatelessWidget {
                         left: flexibleWidth * 0.336,
                         right: flexibleWidth * 0.336,
                       ),
-                      child: const Text(
-                        '-임시 중단 기간-',
-                        style: TextStyle(
-                          fontSize: 26,
-                          color: Color(0xff5E5E5E),
+                      child: const TextRenderer(
+                        text: "패트릭 코어 임시 중단 기간",
+                        child: Text(
+                          '-임시 중단 기간-',
+                          style: TextStyle(
+                            fontSize: 26,
+                            color: Color(0xff5E5E5E),
+                          ),
                         ),
                       ),
                     ),
@@ -120,30 +124,21 @@ class TempSuspension extends StatelessWidget {
                 const SizedBox(
                   height: 23,
                 ),
-                if (kIsWeb)
-                  const Text(
-                    '03월28일14시 - 03월31일22시',
-                    style: TextStyle(
-                      fontSize: 26,
-                      color: Color(0xffFF0012),
-                    ),
-                  )
-                else
-                  FittedBox(
-                    fit: BoxFit.fitWidth,
-                    child: Padding(
-                      padding: EdgeInsets.only(
-                          left: flexibleWidth * 0.18,
-                          right: flexibleWidth * 0.18),
-                      child: const Text(
-                        '03월28일14시 - 03월31일22시',
-                        style: TextStyle(
-                          fontSize: 26,
-                          color: Color(0xffFF0012),
-                        ),
+                FittedBox(
+                  fit: BoxFit.fitWidth,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                        left: flexibleWidth * 0.18,
+                        right: flexibleWidth * 0.18),
+                    child: const Text(
+                      '03월28일14시 - 03월31일22시',
+                      style: TextStyle(
+                        fontSize: 26,
+                        color: Color(0xffFF0012),
                       ),
                     ),
                   ),
+                ),
               ],
             ),
           ),
@@ -165,8 +160,43 @@ class TempSuspension extends StatelessWidget {
             height: 65,
           ),
           SvgPicture.asset('assets/images/logo_img.svg'),
+//          InkResponse(
+//            onTap: () {
+//              Navigator.of(context).pushNamed('/name_test');
+////              Navigator.push<MaterialPageRoute>(
+////                  context, MaterialPageRoute(builder: (_) => NameTest()));
+//            },
+//            child: FittedBox(
+//              child: Text("이동 버튼"),
+//            ),
+//          ),
         ],
       ),
     );
   }
 }
+
+/// ### (5) Ink ... decoration 사용시에는 Material
+//
+//사용 예시
+//```dart
+//Container(
+//  height:64
+//  decoration: const BoxDecoration(
+//    color:primaryColor,
+//    borderRadius: BorderRadius.all(
+//      Radius.circular(10),
+//      ),
+//    ),child:InkWell()....
+//
+//
+//SizedBox(
+//  height:64
+//  child: Material(
+//    color:primaryColor,
+//    shape: const RoundedRectangleBorder(
+//      borderRadius: BorderRadius.all(
+//        Radius.circular(10),
+//        ),
+//     ),child: InkWell().....
+//```
