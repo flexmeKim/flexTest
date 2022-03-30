@@ -2,10 +2,16 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/widgets.dart';
 import 'package:web_temp_suspension/view/components/home_component.dart';
 import 'package:web_temp_suspension/view/components/simple_component.dart';
+import 'package:web_temp_suspension/view/sample/sample.dart';
 
 var rootHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
   return HomeComponent();
+});
+
+var sampleHandler = Handler(
+    handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
+  return SamplePage();
 });
 
 var demoRouteHandler = Handler(

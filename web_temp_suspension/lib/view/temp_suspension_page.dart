@@ -4,10 +4,21 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
 import 'package:web_temp_suspension/view/named_page.dart';
 
+extension ContextExtension on BuildContext {
+  MediaQueryData get mediaQuery => MediaQuery.of(this);
+}
+
+extension PassWordExtension on String {
+  bool get isValidPassword => length >= 6;
+}
+
 class TempSuspension extends StatelessWidget {
   TempSuspension({Key? key, required this.title}) : super(key: key);
 
   String title;
+  int count = 0;
+
+//  int length = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -159,17 +170,17 @@ class TempSuspension extends StatelessWidget {
           const SizedBox(
             height: 65,
           ),
-          SvgPicture.asset('assets/images/logo_img.svg'),
-//          InkResponse(
-//            onTap: () {
-//              Navigator.of(context).pushNamed('/name_test');
-////              Navigator.push<MaterialPageRoute>(
-////                  context, MaterialPageRoute(builder: (_) => NameTest()));
-//            },
-//            child: FittedBox(
-//              child: Text("이동 버튼"),
-//            ),
-//          ),
+          InkWell(
+            onTap: () {
+              count++;
+              if (count == 10) {
+                count = 0;
+                Navigator.of(context).pushNamed('/sample');
+              }
+            },
+            child: SvgPicture.asset('assets/images/logo_img.svg'),
+          ),
+
         ],
       ),
     );

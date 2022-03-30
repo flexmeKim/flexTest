@@ -8,6 +8,7 @@ class FlexRouter {
   static String root = '/';
   static String demoPage = '/name_test/fixedtrans';
   static String demoPageFixedTrans = '/home';
+  static String sample ="/sample";
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
@@ -15,6 +16,7 @@ class FlexRouter {
       log("not Found Handler");
       return;
     });
+    router.define(sample, handler: sampleHandler);
     router.define(root, handler: rootHandler);
     router.define(demoPage, handler: demoRouteHandler);
     router.define(demoPageFixedTrans,
