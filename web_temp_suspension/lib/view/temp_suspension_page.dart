@@ -180,7 +180,6 @@ class TempSuspension extends StatelessWidget {
             },
             child: SvgPicture.asset('assets/images/logo_img.svg'),
           ),
-
         ],
       ),
     );
